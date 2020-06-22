@@ -1,0 +1,13 @@
+# Read about fixtures at http://api.rubyonrails.org/classes/ActiveRecord/FixtureSet.html
+
+one:
+  warehouse_quantity: 1
+  user_id: 1
+  supplier: one
+  product: one
+
+two:
+  warehouse_quantity: 1
+  user_id: 1
+  supplier: two
+  product: two
