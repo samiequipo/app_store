@@ -2,9 +2,7 @@ class CategoriesController < ApplicationController
   before_action :set_category, only: [:edit, :update, :destroy]
   
   def index
-    @category = Category.new
     @categories = Category.descendent
-    # @category_2 = Category.last
   end
 
   def new

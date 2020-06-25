@@ -6,8 +6,10 @@
 #   movies = Movie.create([{ name: 'Star Wars' }, { name: 'Lord of the Rings' }])
 #   Character.create(name: 'Luke', movie: movies.first)
 
- category = [{name: 'Sport', description: 'Shoes, socks and others accesories'},
-             {name: 'Kitchen', description: 'For our mom'}   
+ category = [{name: 'Sport 2', description: 'We can see clothes of your favorite athletes'},
+             {name: 'Koepp Group', description: 'Reduced real-time pricing structure'},   
+             {name: 'Rosenbaum - Greenholt', description: 'Synergized real-time knowledge user'},   
+             {name: 'Windler Group', description: 'Intuitive multi-state adapter'},   
             ]
 
 category.each do |category|
