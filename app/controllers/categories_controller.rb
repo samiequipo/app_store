@@ -12,21 +12,40 @@ class CategoriesController < ApplicationController
   def create
     # byebug
     @category = Category.new(category_params)
-    @category.save
-    redirect_to categories_path  
+
+     respond_to do |format|
+      # format.js { render template: 'categories/create2.js.erb' }
+      if @category.save
+        format.json { head :no_content }
+        format.js
+      else
+        format.json { render json: @category.errors.full_messages, status: :unprocessable_entity }
+        format.js { render :new }
+      end
+    end
   end
   
   def edit
   end
   
   def update
-    @category.update(category_params)
-    redirect_to categories_path  
+    respond_to do |format|
+      if @category.update(category_params)
+        format.json { head :no_content }
+        format.js
+      else
+        format.json { render json: @category.errors.full_messages, status: :unprocessable_entity }
+        format.js { render :edit }
+      end
+    end
   end
   
   def destroy
     @category.destroy
-    redirect_to categories_path  
+    respond_to do |format|
+      format.json { respond :no_content }
+      format.js 
+    end
   end
 
   private
