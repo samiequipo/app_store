@@ -1,0 +1,27 @@
+<%= form_with(model: @category, remote: true) do |form| %>
+  <div class="form-group">
+    <h4 class="control-label">Datos de la categor&iacute;a:</h4>
+  </div>
+
+  <div class="item form-group<%= @category.errors[:name].any? ? 'has-error has-feedback' : '' %>">
+    <%= form.label :name, "Nombre de la categoría:" %>
+    <div class="input-group">
+      <%= form.text_field :name, class:"form-control", placeholder: "" %>
+      <% if @category.errors[:name].any? %>
+        <p class="bg-danger"><%= category.errors[:name].to_s[/\w([^"]*)/] %></p>
+      <% end %>
+    </div>
+  </div>
+
+  <div class="item form-group<%= @category.errors[:description].any? ? 'has-error has-feedback' : '' %>">
+    <%= form.label :description, "Descripción de la categoría:" %>
+    <div class="input-group">
+      <%= form.text_area :description, class:"form-control", placeholder: "" %>
+      <% if @category.errors[:description].any? %>
+        <p class="bg-danger"><%= category.errors[:description].to_s[/\w([^"]*)/] %></p>
+      <% end %>
+    </div>
+  </div>
+
+  <%= form.submit @category.new_record? ? "Crear Categoría" : "Actualizar Categoría", :class => "btn btn-success"%>
+<% end %>

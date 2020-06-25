@@ -3,4 +3,6 @@ class Category < ApplicationRecord
   validates :description, length: {minimum:11, maximum:255}
 
   has_many :products
+
+  scope :descendent, -> { order(created_at: :desc) }
 end

@@ -1,0 +1,27 @@
+<h3 class="h3 mb-2 text-gray-800">Categor&iacute;as de productos</h3>
+
+<%= link_to new_category_path, remote: true, class: "btn btn-info mb-3", id: "anadir-categoria-btn" do %>
+  <span class="fas fa-plus-square"></span>
+<% end %>
+
+<div class="card shadow mb-4">
+  <div class="card-body">
+    <div class="table-responsive">
+      <table class="table table-bordered" id="dataTable" width="100%" cellspacing="0">
+        <thead>
+          <tr>
+            <th>Nombre categor&iacute;a</th>
+            <th>Descripci&oacute;n categor&iacute;a</th>
+            <th></th>
+          </tr>
+        </thead>
+
+        <tbody>
+          <%= render @categories %>
+        </tbody>
+      </table>
+    </div>
+  </div>
+</div>
+
+<%= render 'modal' %>

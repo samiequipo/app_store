@@ -1,0 +1,9 @@
+<tr>
+  <td><%= category.name %></td>
+  <td><%= category.description %></td>
+  <td>
+    <%# <button class= "btn btn-info" data-toggle="modal" data-target="#exampleModal">Editar</button> %>
+    <%= link_to 'Edit', edit_category_path(category), class: 'btn btn-info', "data-dismiss=" => "modal", "data-toggle" => "modal", 'data-target' => '#exampleModal', remote: true %>
+    <%= link_to 'Borrar', category, method: :delete, remote: true, class: 'btn btn-danger', data: {confirm: "are you sure? #{category.name}"} %>
+  </td>
+</tr>
