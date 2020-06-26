@@ -1,0 +1,9 @@
+<tr id="client_<%= @client.id %>">
+  <td><%= @client.total_name %></td>
+  <td><%= @client.address %></td>
+  <td><%= @client.phone_number %></td>
+  <td>
+    <%= link_to 'Editar', edit_client_path(@client), remote: true, class: "btn btn-info" %>
+    <%= link_to 'Borrar', @client, method: :delete, remote: true, class: 'btn btn-danger', data: {confirm: "are you sure? #{@client.total_name}"} %>
+  </td>
+</tr>

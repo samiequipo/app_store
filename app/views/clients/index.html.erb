@@ -1,0 +1,28 @@
+<h3 class="h3 mb-2 text-gray-800">Clientes</h3>
+
+<%= link_to new_client_path, remote: true, class: "btn btn-info mb-3" do %>
+  <span class="fas fa-plus-square"></span>
+<% end %>
+
+<div class="card shadow mb-4">
+  <div class="card-body">
+    <div class="table-responsive">
+      <table class="table table-bordered" id="dataTable" width="100%" cellspacing="0">
+        <thead>
+          <tr>
+            <th>Nombre</th>
+            <th>Direcci&oacute;n</th>
+            <th>Tel&eacute;fono</th>
+            <th>Acciones</th>
+          </tr>
+        </thead>
+
+        <tbody>
+          <%= render @clients %>
+        </tbody>
+      </table>
+    </div>
+  </div>
+</div>
+
+<%= render "modal_client" %>
