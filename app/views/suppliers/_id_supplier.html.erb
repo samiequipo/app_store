@@ -1,0 +1,9 @@
+<tr id="supplier_<%= @supplier.id %>">
+  <td><%= @supplier.total_name %></td>
+  <td><%= @supplier.address %></td>
+  <td><%= @supplier.phone_number %></td>
+  <td>
+    <%= link_to 'Editar', edit_supplier_path(@supplier), remote: true, class: "btn btn-info" %>
+    <%= link_to 'Borrar', @supplier, method: :delete, remote: true, class: 'btn btn-danger', data: {confirm: "are you sure? #{@supplier.total_name}"} %>
+  </td>
+</tr>
