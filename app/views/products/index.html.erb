@@ -1,0 +1,33 @@
+<h1 class="h3 mb-2 text-gray-800">Productos</h1>
+
+<div>
+  <%= link_to new_product_path, { remote: true, class: "btn btn-info mb-3" }  do %>
+    <span class="fas fa-plus-square" ></span>
+  <% end %>
+</div>
+
+<div class="card shadow mb-4">
+  <div class="card-body">
+    <div class="table-responsive">
+      <table class="table table-bordered" id="dataTable" width="100%" cellspacing="0">
+        <thead>
+          <tr>
+            <th></th>
+            <th>Nombre producto</th>
+            <th>Existencia</th>
+            <th>Precio</th>
+            <th>Categor&iacute;a</th>
+            <th>Proveedor</th>
+            <th>Acci&oacute;n</th>
+          </tr>
+        </thead>
+
+        <tbody>
+          <%= render @products %>
+        </tbody>
+      </table>
+    </div>
+  </div>
+</div>
+
+<%= render 'modal_products' %>

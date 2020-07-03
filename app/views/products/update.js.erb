@@ -1,0 +1,2 @@
+$('#modalProduct').modal('toggle');
+$('#product_<%= @product.id %>').replaceWith('<%= j render("product", product: @product)%>');

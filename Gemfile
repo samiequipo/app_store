@@ -31,7 +31,10 @@ gem 'jbuilder', '~> 2.5'
 gem 'devise'
 gem 'bootstrap', '~> 4.0.0'
 gem 'font_awesome5_rails'
-
+gem 'carrierwave', '~> 2.0'
+gem "fog-google"
+gem "google-api-client", "> 0.8.5", "< 0.9"
+gem "mime-types"
 # Use ActiveStorage variant
 # gem 'mini_magick', '~> 4.8'
 

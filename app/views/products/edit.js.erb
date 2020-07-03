@@ -1,0 +1,5 @@
+$('#modal-product-title').html('<%= @product.new_record? ? "Nuevo producto" : "Editar producto" %>')
+
+$('.modal-body-product').html('<%= j render("form")%>');
+
+$('#modalProduct').modal('show');
