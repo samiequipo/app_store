@@ -99,12 +99,11 @@ GEM
     faraday (0.17.3)
       multipart-post (>= 1.2, < 3)
     ffi (1.13.1)
-    fog-core (2.2.0)
+    fog-core (1.45.0)
       builder
-      excon (~> 0.71)
+      excon (~> 0.58)
       formatador (~> 0.2)
-      mime-types
-    fog-google (0.6.0)
+    fog-google (0.1.0)
       fog-core
       fog-json
       fog-xml

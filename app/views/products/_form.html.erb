@@ -4,7 +4,6 @@
   </div>
 
   <div class="item form-group<%= @product.errors[:name].any? ? ' has-error has-feedback' : '' %>">
-    <%= f.label :name, "Nombre del producto: " %>
     <%= image_tag(@product.image.url, size: "150x150") if @product.image? %>
     <div class="input-group">
       <%= f.file_field :image, class: "form-control" %>
