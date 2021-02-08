@@ -31,7 +31,7 @@ gem 'jbuilder', '~> 2.5'
 gem 'devise'
 gem "bootstrap", ">= 4.3.1"
 gem 'font_awesome5_rails'
-gem 'carrierwave', '~> 2.0'
+gem 'carrierwave', '~> 2.1'
 gem "fog-google"
 gem "google-api-client", "> 0.8.5", "< 0.9"
 gem "mime-types"
